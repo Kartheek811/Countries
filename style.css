@@ -5,7 +5,7 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background-color: #74b560;
+  background-color:#74b560;
 }
 .container {
   background-color: #ffffff;
@@ -26,7 +26,7 @@ body {
 }
 .search-wrapper button {
   font-size: 1em;
-  background-color: #74b560;
+  background-color:#74b560;
   color: #ffffff;
   padding: 0.8em 0;
   border: none;
