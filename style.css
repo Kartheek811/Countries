@@ -47,7 +47,7 @@ body {
 }
 .container .flag-img {
   
-  display: inline-block;
+  display: inline;
   width: 10%;
   min-width: 7.5em;
   margin: 20px;
