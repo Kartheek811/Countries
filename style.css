@@ -19,6 +19,8 @@ body {
   border-radius: 0.62em;
   box-shadow: 0 1.25em 1.8em rgba(8, 21, 65, 0.25);
 }
+
+/* search layout */
 .search-wrapper {
   display: grid;
   grid-template-columns: 9fr 3fr;
@@ -43,13 +45,23 @@ body {
 #result {
   margin-top: 1.25em;
 }
+
+/* <<< UPDATED: center the flag and make it responsive >>> */
 .container .flag-img {
-  
   display: inline;
   width: 10%;
   min-width: 7.5em;
   margin: 20px;
+  display: block;             /* make it a block so margin auto centers horizontally */
+  margin: 0 auto 20px;        /* center horizontally, add bottom spacing */
+  width: auto;                /* let max-width control resizing */
+  max-width: 160px;          /* maximum width (adjustable) */
+  min-width: 7.5em;          /* keep your original minimum to avoid too tiny flags */
+  height: auto;               /* keep aspect ratio */
+  border-radius: 6px;         /* optional: soft corners */
 }
+/* <<< end updated rule >>> */
+
 .container h2 {
   font-weight: 600;
   color: #222a43;
@@ -75,4 +87,20 @@ body {
   font-size: 1.2em;
   font-weight: 400;
   color: #ff465a;
+}
+
+/* Optional: responsive tweak for small screens */
+@media (max-width: 420px) {
+  .container {
+    width: 92vw;
+    padding: 2em 1.25em;
+  }
+  .container .flag-img {
+    max-width: 120px;
+    min-width: 6.5em;
+  }
+  .search-wrapper {
+    grid-template-columns: 1fr; /* stack search + button on very small screens */
+    gap: 0.75em;
+  }
 }
